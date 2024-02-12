@@ -31,6 +31,9 @@ body {
     margin-top: 3.5%;
     left: 2.5%;
 }
+#search{
+    margin-top: 4px;
+}
 
 .header li {
     margin-right: 15px;
@@ -42,7 +45,8 @@ body {
 }
 #products::after {
     content: " ▼"; /* Use the Unicode down arrow character */
-    color: #333; /* Set the color of the arrow */
+    color: #333;
+    margin-top: 0px;
 }
 .profile-icon{
     height: 30px;        
@@ -79,6 +83,8 @@ body {
     padding-bottom: 2%;
     white-space: nowrap;
     border: 1px solid gray;
+    background-color: #333;
+    color: white;
 }
 #one-person{
     width: 40%;

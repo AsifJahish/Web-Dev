@@ -51,7 +51,7 @@ h1 {
     align-self: center;
 }
 .right-container {
-    width: 50%;
+    width: 45%;
     height: 70%;
     position: relative;
     top: 5%;
@@ -76,10 +76,11 @@ input {
     margin-top: 10px ;
     margin-bottom: 10px ;
     padding: 8px;
-    border-radius: 6px, rgb(77, 94, 248);
+    border-radius: 10px;
+    border-radius: rgb(56, 76, 249);
 }
 input:hover{
-    color: blue;
+        color: rgb(27, 27, 253);
 }
 button {
     width: 60%;
@@ -107,7 +108,7 @@ button {
     margin: 20px auto;
     width: 70%;
     color: blue; 
-    margin-left: 40%;
+    margin-left: 35%;
     
 }
 .line {
@@ -186,4 +187,8 @@ p2{
     width: 75%;
     margin: 10px auto;
     border-top: 1px solid gray;
+}
+
+#meta{
+    padding-top: 2%;
 }

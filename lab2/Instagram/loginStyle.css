@@ -30,9 +30,21 @@ body {
     margin-bottom: 20%;
 }
 
-.phone{
-    width: 60%;
-  
+.phone {
+    width: 70%;
+    height: 120%;
+    z-index: 1;
+    position: absolute; 
+    top: 0; 
+}
+
+.main {
+    width: 36%;
+    z-index: 2;
+    position: absolute; 
+    top: 24px; 
+    left: 230px; 
+    margin-bottom: 100px;
 }
 .right{
     flex-direction: column;
@@ -47,13 +59,12 @@ body {
     background-color: white;
     box-sizing: border-box;
     border: 1px solid rgb(152, 151, 151);
-    border-radius: 6px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     margin-right: 45%;
     position: absolute;
     right: 10%;
-
   
 }
 
@@ -85,7 +96,7 @@ button {
 }
 
 .login{ 
-    background-color: blue;
+    background-color: rgb(109, 109, 224);
     width: 80%;
     height: 40px;
     margin: 10px;
@@ -117,7 +128,7 @@ button {
 
 .or-text {
     margin: 0 10px;
-    font-weight: bold; /* Optional: Adjust font weight as needed */
+    font-weight: bold; 
 }
 .textFacebook{
     margin-left: 25%;
@@ -129,7 +140,7 @@ button {
 }
 .facebook-icon {
     width: 15px; 
-    margin-right: 5px; /* Adjust the margin between the icon and text as needed */
+    margin-right: 5px; 
 }
 #forgot{
     margin-left: 30%;
@@ -148,7 +159,7 @@ button {
     right: 10%;
     background-color: white;
     box-sizing: border-box;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-right: 45%;
     align-items: center;
     margin-top: 2%;
@@ -168,11 +179,11 @@ button {
     margin-top: 8%;
     margin-left: 1%;
 }
-p1{
+.bottom p1{
     position: relative;
     right: 10%;
-    margin-left: 1%;
-    margin-right: 5%;
+    margin-left: 3%;
+    margin-right: 3%;
 }
 .app-contianer{
    
@@ -182,13 +193,17 @@ p1{
 }
 #app-icon{
     position: relative;
-    right: 10%;
+    right: 20%;
     margin-top: 10px;
     width: 120px;
+    margin-left: 10%;
 }
 #google-icon{
     width: 120px;
     margin-top: 10px;
+    position: relative;
+    right: 20%;
+    margin-right: 10%;
     
 }
 
@@ -196,6 +211,7 @@ p1{
     position: relative;
     bottom: 1%;
     top:5%
+   
     
     
 }
@@ -203,4 +219,9 @@ p1{
     margin-left: 10%;
     padding-left:10%;
     word-spacing: 9px;
+    padding-left:15%;
+}
+#meta-lan{
+    margin-top: 2%;
+    padding-left: 50%;
 }
