@@ -15,4 +15,27 @@ function hi(){ //new block
         console.log("Student gpa less than 3.5");
     }
 }
+
+
+
+function news(name, age, gpa){
+
+    console.log(name)
+    console.log(age)
+    console.log(gpa)
+
+    var newStudent= {
+        name: name,
+        age: age,
+        gpa: gpa
+    }
+
+    return newStudent;
+
+}
+
+var newStudent2= news("noName", 23,3.4)
+console.log(newStudent2)
+
+
 hi();

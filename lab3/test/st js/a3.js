@@ -32,7 +32,7 @@ console.log(d); //28 45 filters array by v > 20
 let s = c.reduce(function(sum, v){
     return sum + v;
 }, 0);
-console.log(s);
+console.log("this "+s);
 
 
 // for(var i = 0; i < arr.length; i++){

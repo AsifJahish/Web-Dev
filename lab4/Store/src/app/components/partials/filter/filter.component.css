@@ -1,0 +1,38 @@
+
+#filter {
+    width: auto ;
+    margin-top: 1px;
+    height: 40px;
+    border: 1px solid gray;
+    display: flex;
+    align-items: center;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    margin-left: 25%;
+  }
+  
+  li {
+    margin: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  
+  li {
+    text-decoration: none;
+    color: #333;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: background-color 0.3s;
+  }
+  
+  li:hover {
+    background-color: #969696;
+  }	
+  

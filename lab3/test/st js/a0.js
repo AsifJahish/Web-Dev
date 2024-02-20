@@ -1,7 +1,4 @@
-// let a = document.getElementsByTagName('h1');
-// let a = document.getElementById('btn');
-// let a = document.getElementsByClassName('box');
-//let a = document.querySelector('html body .box');
+
 let a = document.querySelector('.box');
 //console.log(a);
 a.innerHTML = "hello message"; 
@@ -11,9 +8,9 @@ a.style.fontWeight = 'bold';
 
 let btn = document.querySelector('#btn');
 btn.style.backround = "yellow";
-btn.style.fontSize = "25px";
-btn.style.border = "solid 5px green";
-btn.style.borderRadius = "20px";
+btn.style.fontSize = "20px";
+btn.style.border = "solid 3px green";
+btn.style.borderRadius = "15px";
 btn.style.padding = "10px 40px";
 console.log(btn.getAttribute('data-id'));
 btn.setAttribute('data-id', 111);
@@ -28,10 +25,6 @@ let container = document.querySelector('.container');
 container.appendChild(text);
 
 
-// alert('Message');
-//let res = confirm('Agree?');
-// let n = prompt("Enter your name");
-// console.log(n);
 
 let i = 0;
 function show(){
