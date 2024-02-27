@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div id="box">
+  <div class="items" *ngFor="let item of items">
+    <h1>{{item.name}}</h1>
+    <img [src]="item.imageUrl" alt="image">
+    <div class="detial-box">
+    <p>
+      <a class="item-link" href="{{ item.link }}" target="_blank">{{ item.detail }}</a>
+    </p>
+  </div>
+    <br>
+    <span *ngFor="let star of getStarArray(item.rating)" class="fa fa-star checked"></span>
+    <span *ngFor="let star of getStarArray(5 - item.rating)" class="fa fa-star"></span>
+    <br>
+  
+    <button class="button1" (click)="share(item)">ShareTelegram</button>
+
+    <button class="button2" (click)="share1(item)">ShareWhatsapp</button>
+   
+  </div>
+ 
+</div>

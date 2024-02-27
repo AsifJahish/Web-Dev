@@ -1,0 +1,12 @@
+/* parent.component.css */
+
+#box {
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1px;
+    padding: 15px;
+    text-align: center;
+  }
+  

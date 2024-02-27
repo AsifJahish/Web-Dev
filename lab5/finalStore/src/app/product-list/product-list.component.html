@@ -1,0 +1,16 @@
+<!-- parent.component.html -->
+
+<app-filter [all]="total"
+  [computers]="totalComputer"
+  [householdProducts]="totalHouseHoldProduct"
+  [beautyHealth]="totalBeautyHealth"
+  [pharmacy]="totalPharmacy"
+  [childrenGood]="totalChildrenGoods"
+  (onchange)="onfilteredChanged($event)"></app-filter>
+
+  <div id="box">
+    <div *ngFor="let product of filteredProducts" class="items">
+      <app-product-item [product]="product"></app-product-item>
+    </div>
+  </div>
+  
