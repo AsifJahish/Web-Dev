@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router'; 
 
 
 class Item {
@@ -15,7 +16,11 @@ class Item {
     this.rating = rating;
     this.link= link
   }
+
+  
 }
+
+
 
 @Component({
   selector: 'app-item',
@@ -47,7 +52,23 @@ export class ItemComponent {
   }
 
 
+  // share(item: Item) {
+  //   if (navigator.share) {
+  //     navigator.share({
+  //       title: 'My Store Item',
+  //       text: item.detail,
+  //       url: item.link,
+  //     })
+  //       .then(() => console.log('Shared successfully'))
+  //       .catch((error) => console.error('Error sharing:', error));
+  //   } else {
+  //     const shareUrl = `https://your-website.com/share?title=${encodeURIComponent(item.name)}&description=${encodeURIComponent(item.detail)}&url=${encodeURIComponent(item.link)}`;
+  //     window.open(shareUrl, '_blank');
+  //   }
+  // }
   share(item: Item) {
+    const telegramShareUrl = `https://t.me/share/url?url=${encodeURIComponent(item.link)}&text=${encodeURIComponent(item.name + '\n' + item.detail)}`;
+  
     if (navigator.share) {
       navigator.share({
         title: 'My Store Item',
@@ -57,10 +78,44 @@ export class ItemComponent {
         .then(() => console.log('Shared successfully'))
         .catch((error) => console.error('Error sharing:', error));
     } else {
-      const shareUrl = `https://your-website.com/share?title=${encodeURIComponent(item.name)}&description=${encodeURIComponent(item.detail)}&url=${encodeURIComponent(item.link)}`;
-      window.open(shareUrl, '_blank');
+      window.open(telegramShareUrl, '_blank');
     }
   }
   
+  
+  share1(item: Item) {
+    const whatsappShareUrl = `https://wa.me/?text=${encodeURIComponent(item.name + '\n' + item.detail + '\n' + item.link)}`;
+  
+    if (navigator.share) {
+      navigator.share({
+        title: 'My Store Item',
+        text: item.detail,
+        url: item.link,
+      })
+        .then(() => console.log('Shared successfully'))
+        .catch((error) => console.error('Error sharing:', error));
+    } else {
+      // Open WhatsApp share link
+      window.open(whatsappShareUrl, '_blank');
+    }
+  }
+    
+  share3(item: Item) {
+    const kaspiShareUrl = it;
+  
+    if (navigator.share) {
+      navigator.share({
+        title: 'My Store Item',
+        text: item.detail,
+        url: item.link,
+      })
+        .then(() => console.log('Shared successfully'))
+        .catch((error) => console.error('Error sharing:', error));
+    } else {
+      // Open WhatsApp share link
+      window.open(kaspiShareUrl, '_blank');
+    }
+  }
+    
 
 }
