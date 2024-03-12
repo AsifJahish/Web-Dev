@@ -8,9 +8,17 @@
   [childrenGood]="totalChildrenGoods"
   (onchange)="onfilteredChanged($event)"></app-filter>
 
-  <div id="box">
+  <!-- <div id="box">
     <div *ngFor="let product of filteredProducts" class="items">
       <app-product-item [product]="product"></app-product-item>
     </div>
   </div>
-  
+   -->
+   <!-- product-list.component.html -->
+
+<div id="box">
+  <div *ngFor="let product of filteredProducts" class="items">
+    <app-product-item [product]="product" (deleteProduct)="deleteProduct($event)"></app-product-item>
+  </div>
+</div>
+

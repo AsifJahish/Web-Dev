@@ -1,0 +1,65 @@
+/* src/app/header/header.component.css */
+#header {
+  background-color: #3498db;
+  height: 50px;
+  padding: 10px 0;
+  text-align: center;
+
+}
+
+
+
+h1 {
+  position: absolute;
+  margin: 2px;
+  right: 20px;
+}
+
+#navigation {
+
+  display: flex;
+  align-items: center;
+  position: absolute;
+  background: transparent;
+  padding: 10px 0;
+  width: 50%;
+}
+
+#home{
+  position: absolute;
+  
+  width: 30px;
+  left: 120%;
+}
+#homeText{
+  font-size: 25px;
+  position: absolute;
+  margin-left: 10%;
+
+}
+
+#about{
+  position: absolute;
+  width: 30px;
+  margin-left: px;
+  left: 25%;
+}
+#aboutText{
+  font-size: 25px;
+  position: absolute;
+  left: 30%;
+
+}
+
+#album{
+  position: absolute;
+  width: 30px;
+  margin-left: px;
+  left: 130%;
+}
+#albumText{
+  font-size: 25px;
+  position: absolute;
+  left: 50%;
+
+}

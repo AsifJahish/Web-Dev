@@ -1,6 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter  } from '@angular/core';
 
-class Item {
+export class Item {
   name: string;
   imageUrl: string;
   detail: string;
@@ -18,6 +18,8 @@ class Item {
   }
 }
 
+
+
 @Component({
   selector: 'app-product-item',
   templateUrl: './product-item.component.html',
@@ -26,18 +28,22 @@ class Item {
 export class ProductItemComponent {
 
   @Input() product: Item;
+  @Output() deleteProduct: EventEmitter<Item> = new EventEmitter();
+  @Output() starClicked: EventEmitter<{ index: number, rating: number }> = new EventEmitter();
 
   stars: boolean[] = Array(5).fill(false);
 
-  getStarsArray(rating: number): boolean[] {
-    // Initialize stars based on the product's rating
-    return this.stars.map((_, index) => index < rating);
+  getStarsArray(): boolean[] {
+    return this.stars;
   }
 
-  toggleStar(starIndex: number, rating: number): void {
-    // Toggle the stars based on the clicked star and product's rating
-    this.stars = this.stars.map((_, index) => index <= starIndex ? !this.stars[starIndex] : index < rating);
+
+
+  toggleStar():void{
+    this.stars= Array(5).fill(true)
   }
+
+
 
   share(item: Item) {
     const telegramShareUrl = `https://t.me/share/url?url=${encodeURIComponent(item.link)}&text=${encodeURIComponent(item.name + '\n' + item.detail)}`;
@@ -73,4 +79,8 @@ export class ProductItemComponent {
     }
   }
 
+  delete(product: Item): void {
+    // Emit the event to notify the parent component to delete the product
+    this.deleteProduct.emit(product);
+  }
 }

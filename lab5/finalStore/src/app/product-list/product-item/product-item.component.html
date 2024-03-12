@@ -10,18 +10,19 @@
       <p>
         <a class="item-link" href="{{ product.link }}" target="_blank">{{ product.detail }}</a>
       </p>
-    </div>
-    <br>
  
+  
+    </div>
 
-    <span *ngFor="let star of getStarsArray(product.rating); let i = index" class="fa" [ngClass]="{'fa-star': star, 'fa-star-o': !star}" (click)="toggleStar(i, product.rating)"></span>
-
-    <!-- <span [ngClass]="{'fa': true, 'fa-star': true, 'checked': true}"></span> -->
-    <br>
+    <div class="star-container">
+      <span *ngFor="let star of getStarsArray()" class="fa" [ngClass]="{'fa-star': star, 'fa-star-o': !star}" (click)="toggleStar()"></span>
+    </div>
 
 
     <button class="button1" (click)="share(product)">ShareTelegram</button>
 
     <button class="button2" (click)="share1(product)">ShareWhatsapp</button>
+
+    <button class="button2" (click)="delete(product)">Remove</button>
   </div>
 </div>

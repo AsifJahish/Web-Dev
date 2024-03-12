@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Item } from './product-item/product-item.component';
 
 
 
@@ -256,6 +257,15 @@ export class ProductListComponent {
   }
 
   filteredProducts = this.products
+
+
+  deleteProduct(product: Item): void {
+    // Remove the product from the array or perform any other necessary actions
+    const index = this.filteredProducts.indexOf(product);
+    if (index !== -1) {
+      this.filteredProducts.splice(index, 1);
+    }
+  }
 
 }
   

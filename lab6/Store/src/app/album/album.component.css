@@ -1,0 +1,44 @@
+/* src/styles.css or any other CSS file */
+
+.album-item {
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.album-details {
+  font-size: 16px;
+}
+
+.album-id {
+  font-weight: bold;
+}
+
+.album-number {
+  font-style: italic;
+}
+
+.album-title {
+  margin-top: 5px;
+}
+
+a {
+  height: 10px;
+  width: 30px;
+  margin-left: 50px;
+  display: inline-block;
+  padding: 10px;
+  padding-top: 2px;
+  text-decoration: none;
+  background-color: #007bff;
+  color: #ffffff;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}

@@ -1,6 +1,6 @@
 
 #box {
-
+  width: 100%;
     background-color: #fff;
     display: flex;
     flex-wrap: wrap;
@@ -50,6 +50,10 @@
 
 .items a.item-link:hover {
   text-decoration: underline; /* Example hover underline */
+}
+.star-container{
+  margin: 10px;
+  margin-top: 10px;
 }
   
   .fa-star {

@@ -1,0 +1,21 @@
+<!-- src/app/album-list/album-list.component.html -->
+
+<!-- src/app/album-list/album-list.component.html -->
+<!-- album.component.html -->
+<!-- album.component.html -->
+
+<!-- album.component.html -->
+
+<div class="album-list">
+  <div *ngFor="let album of albumList" class="album-item">
+    <div class="album-details">
+      <div class="album-id">ID: {{ album.id }}</div>
+      <div class="album-number">Number: {{ album.userId }}</div>
+      <div class="album-title">{{ album.title }}</div>
+    </div>
+    <div class="album-buttons">
+      <button (click)="deleteAlbum(album.id)" class="delete-button">Delete</button>
+      <a [routerLink]="['/album', album.id]" class="detail-button">Detail</a>
+    </div>
+  </div>
+</div>

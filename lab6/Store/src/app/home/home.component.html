@@ -1,0 +1,9 @@
+<!-- src/app/photo-gallery/photo-gallery.component.html -->
+<h1>Photo Gallery</h1>
+
+<div class="gallery">
+  <div class="photo" *ngFor="let photo of photos">
+    <img [src]="photo.url" alt="{{ photo.title }}">
+    <div class="photo-title">{{ photo.title }}</div>
+  </div>
+</div>
