@@ -19,6 +19,11 @@ export class AlbumApiService {
     
   }
 
+  setData() {
+    const albums = this.getAlbums().subscribe((albums) => console.log(albums));
+    console.log(albums) // Promises
+  }
+
   getAlbums(): Observable<Album[]> {
     return this.http.get<Album[]>(this.apiUrl);
   }
@@ -39,7 +44,7 @@ export class AlbumApiService {
   }
 
   getPhotosByAlbumId(albumId: number): Observable<Photo[]> {
-    const url = `${this.apiUrl}/${albumId}/photos`; // Remove "/albums" from the URL
+    const url = `${this.apiUrl}/${albumId}/photos`; 
     return this.http.get<Photo[]>(url);
   }
   

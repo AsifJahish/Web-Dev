@@ -44,7 +44,7 @@ export class AlbumDetailComponent implements OnInit {
   }
 
   goBack(): void {
-    this.router.navigate(['/album']);
+    this.router.navigate(['../'])
   }
 
 
